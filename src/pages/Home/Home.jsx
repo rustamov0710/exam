@@ -11,6 +11,9 @@ const Home = () => {
     
     
   return (
+<>
+    <h1 className='text-4xl font-bold text-center'>Our Restaurants</h1>
+
     <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4'>
         {data && data.map(food => (
             <Item key={food.id} 
@@ -24,6 +27,7 @@ const Home = () => {
             />
         ))}
     </ul>
+</>
   )
 }
 

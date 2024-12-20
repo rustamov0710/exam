@@ -15,8 +15,8 @@ const SinglePage = () => {
   return (
     <>
     <Link to='/'>
-    <h1 className='text-center mb-10 title2'>
-      Go Back
+    <h1 className='text-center mb-10'>
+      {'< Go Back'}
     </h1>
     </Link>
     <div className="text-start">

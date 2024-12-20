@@ -1,0 +1,15 @@
+.img{
+    height: 415px;
+}
+.title{
+    border-bottom: #F49B33 solid 1px;
+    padding-bottom: 10px;
+}
+.text{
+    border-bottom: solid 1px #8b8b8b;
+    width: 85px;
+}
+.title2{
+    border: solid #3c3939 1px;
+    width: 100px;
+}

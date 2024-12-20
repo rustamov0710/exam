@@ -33,8 +33,8 @@ const SinglePage = () => {
     <div className="flex gap-5" >
     <img src="./Location_icon_ic.svg" alt="" />
     <div className="flex flex-col">
-    <p>{food.restaurant.address.line1}</p>
-    <p>{food.restaurant.address.line2}</p>
+    <p className='text2'>{food.restaurant.address.line1}</p>
+    <p className='text2'>{food.restaurant.address.line2}</p>
     </div>
     </div>
     <div className="flex items-center gap-5">

@@ -58,7 +58,7 @@ const SinglePage = () => {
     {food.timeSlots.map((timeSlot, index) => (
       <button
         key={index}
-        className={`py-1 px-4 rounded text-white transition-all duration-300 ${
+        className={`py-1 px-4 rounded text-white transition-all ${
           timeSlot.available
             ? "bg-orange-500 hover:bg-orange-600"
             : "bg-gray-300 text-gray-500"

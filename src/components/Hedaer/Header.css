@@ -1,0 +1,9 @@
+.active{
+    color: #46A358;
+    padding-bottom: 25px;
+    border-bottom: #46A358 solid 2px;
+}
+.header{
+    border-bottom: #f3f3f3 solid 2px;
+    margin-bottom: 12px;
+}

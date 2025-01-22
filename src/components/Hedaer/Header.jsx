@@ -36,7 +36,7 @@ const Header = () => {
         </nav>
 
         {/* Search, Korzinka va Login */}
-        <div className="flex items-center space-x-[35px]">
+        <div className="flex items-center space-x-[20px]">
           <div className="relative">
             <button
               onClick={toggleSearch}

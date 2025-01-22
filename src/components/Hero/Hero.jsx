@@ -3,7 +3,7 @@ import './Hero.css';
 
 const Hero = () => {
   return (
-    <section className="container bg-[#f9f9f9] max-w-[1200px] w-[100%]">
+    <section className="container hero bg-[#f9f9f9] max-w-[1200px] w-[100%]">
       <div className=" mx-auto px-4 flex flex-col-reverse md:flex-row items-center">
 
         <div className="text-center md:text-left md:w-1/2 space-y-6">

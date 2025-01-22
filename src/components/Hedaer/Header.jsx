@@ -4,10 +4,8 @@ import './Header.css';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [showSearch, setShowSearch] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
-  const toggleSearch = () => setShowSearch(!showSearch);
 
   return (
     <header className="header">
@@ -43,19 +41,10 @@ const Header = () => {
           <div className="flex items-center space-x-[10px]">
           <div className="relative">
             <button
-              onClick={toggleSearch}
               className="text-gray-600 w-[20px] h-[20px] hover:text-green-600 mt-[5px]"
             >
               <img src="./search.svg" alt="search_icon" />
             </button>
-
-            {showSearch && (
-              <input
-                type="text"
-                placeholder="Search..."
-                className="absolute top-0 right-[45px] border border-gray-300 rounded-lg px-2 py-1 text-sm w-[200px] focus:outline-none focus:ring-2 focus:ring-green-600"
-              />
-            )}
           </div>
           <button className="text-gray-600 w-[24px] h-[24px] hover:text-green-600">
             <img src="./korzinka.svg" alt="korzinka_icon" />

@@ -3,19 +3,24 @@ import { NavLink } from "react-router-dom";
 import './Header.css';
 
 const Header = () => {
-  const [showSearch, setShowSearch] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
 
-  const toggleSearch = () => setShowSearch(!showSearch);
   const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleSearch = () => setShowSearch(!showSearch);
 
   return (
     <header className="header">
       <div className="container mx-auto px-4 flex justify-between items-center py-4">
-        <div className="text-2xl font-bold text-green-600 flex items-center gap-[5px]">
+        {/* Logo */}
+        <div className="text-2xl font-bold text-green-600 flex items-center gap-[5px] mr-[10px]">
           <img src="./logo.svg" alt="logo" />
           GREENSHOP
         </div>
+
+        
+
+        {/* Navigation (Hidden on mobile, visible on large screens) */}
         <nav
           className={`${
             menuOpen ? "block" : "hidden"
@@ -34,9 +39,8 @@ const Header = () => {
             Blogs
           </NavLink>
         </nav>
-
-        {/* Search, Korzinka va Login */}
-        <div className="flex items-center space-x-[20px]">
+          {/* Search, Korzinka va Login */}
+          <div className="flex items-center space-x-[10px]">
           <div className="relative">
             <button
               onClick={toggleSearch}
@@ -60,6 +64,17 @@ const Header = () => {
             <img src="./logout.svg" alt="login_icon" className="w-[20px] h-[20px]" />
             Login
           </button>
+          {/* Burger Button (visible only on mobile) */}
+        <button
+          onClick={toggleMenu}
+          className={`ml-[5px] lg:hidden flex flex-col justify-between items-center w-6 h-6 space-y-1 ${menuOpen ? "open" : ""}`}
+          aria-label="Toggle menu"
+        >
+          <span className={`block w-full h-1 bg-gray-600 transition-all`}></span>
+          <span className={`block w-full h-1 bg-gray-600 transition-all`}></span>
+          <span className={`block w-full h-1 bg-gray-600 transition-all`}></span>
+        </button>
+          
         </div>
       </div>
     </header>

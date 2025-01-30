@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import './Header.css';
+import logo from '../../assets/logo.svg';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,15 +11,14 @@ const Header = () => {
   return (
     <header className="header">
       <div className="container mx-auto px-4 flex justify-between items-center py-4">
-        {/* Logo */}
+
         <div className="text-2xl font-bold text-green-600 flex items-center gap-[5px] mr-[10px]">
-          <img src="./logo.svg" alt="logo" />
+          <img src={logo} alt="logo" />
           GREENSHOP
         </div>
 
         
 
-        {/* Navigation (Hidden on mobile, visible on large screens) */}
         <nav
           className={`${
             menuOpen ? "block" : "hidden"
